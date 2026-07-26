@@ -31,13 +31,27 @@ form.addEventListener("submit", function (event) {
     const birthday = document.getElementById("birthday").value;
     const gender = document.querySelector('input[name="gender"]:checked').value;
 
-    const date = new Date(birthday);
+    const parts = birthday.split("-");
 
-    const day = date.getDate();
-    const month = date.getMonth() + 1;
-    const year = date.getFullYear();
+    const year = parseInt(parts[0]);
+    const month = parseInt(parts[1]);
+    const day = parseInt(parts[2]);
 
-    const dayOfWeek = date.getDay();
+    const CC = Math.floor(year / 100);
+    const YY = year % 100;
+
+    let dayOfWeek = (
+        Math.floor(CC / 4) -
+        (2 * CC) -
+        1 +
+        Math.floor((5 * YY) / 4) +
+        Math.floor((26 * (month + 1)) /10) +
+        day
+    )   %7;
+
+    if (dayOfWeek < 0){
+        dayOfWeek += 7;
+    }
 
     let akanName;
 
