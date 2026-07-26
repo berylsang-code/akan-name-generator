@@ -16,6 +16,15 @@ GitHub: https://github.com/berylsang-code
 - Responsive user interface
 - Calculates the day of the week using the Akan naming formula.
 
+## BDD (Behavior-Driven Dvelopment)
+| Behavior | Input | Output|
+|----------|-------|-------|
+| User enters valid date of birth and selects Male | Date: 2000-01-01, Gender: Male | Displays the correct male Akan name. |
+| User enters a valid date of birth and selects Female| Date: 2000-01-01, Gender: Female | Displays the correct female Akan name. |
+| User submits the form without selecting a date | No date selected | Displays an alert asking the user to select a date.|
+| User submits the form without selecting a gender | Valid  date entered, no gender selected | Displays an alert asking the user to select a gender. |
+| User enters a valid date and gender | Any valid date and gender | Calculates the day of the week using the Akan formula and displays the corresponding Akan name. |
+
 ## Technologies Used
 - HTML5
 - CSS3
@@ -46,6 +55,11 @@ akan-name-generator/
 ```
 ## Live Demo
 https//berylsang-code.github.io/akan-name-generator/
+
+## Contact Information
+GitHub: https://github.com/berylsang-code
+
+Email: berylsang@student.moringaschool.com
 
 ## License
 This project is licensed under the MIT License.
