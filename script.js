@@ -29,7 +29,13 @@ form.addEventListener("submit", function (event) {
     }
 
     const birthday = document.getElementById("birthday").value;
-    const gender = document.querySelector('input[name="gender"]:checked').value;
+    
+    const selectedGender = document.querySelector('input[name="gender"]:checked');
+    if (!selectedGender) {
+        alert("Please select your gender.");
+        return;
+    }
+    const gender = selectedGender.value;
 
     const parts = birthday.split("-");
 
