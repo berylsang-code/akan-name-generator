@@ -14,6 +14,7 @@ GitHub: https://github.com/berylsang-code
 - Displays the correct Akan name
 - Input validation
 - Responsive user interface
+- Calculates the day of the week using the Akan naming formula.
 
 ## Technologies Used
 - HTML5
